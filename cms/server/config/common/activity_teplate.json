@@ -1,0 +1,151 @@
+{
+  "default": {
+    "name": "全国",
+    "lucky": "",
+    "lottery": "抽奖的activityid"
+  },
+
+  "CHNP001": {
+    "name": "北京",
+    "lucky": "",
+    "lottery": "抽奖的activityid"
+  },
+
+  "CHNP002": {
+    "name": "天津"
+  },
+
+  "CHNP003": {
+    "name": "河北"
+  },
+
+  "CHNP004": {
+    "name": "山西"
+  },
+
+  "CHNP005": {
+    "name": "内蒙古"
+  },
+
+  "CHNP006": {
+    "name": "辽宁"
+  },
+
+  "CHNP007": {
+    "name": "吉林"
+  },
+
+  "CHNP008": {
+    "name": "黑龙江"
+  },
+
+  "CHNP009": {
+    "name": "上海"
+  },
+
+  "CHNP010": {
+    "name": "江苏"
+  },
+
+  "CHNP011": {
+    "name": "浙江"
+  },
+
+  "CHNP012": {
+    "name": "安徽"
+  },
+
+  "CHNP013": {
+    "name": "福建"
+  },
+
+  "CHNP014": {
+    "name": "江西"
+  },
+
+  "CHNP015": {
+    "name": "山东"
+  },
+
+  "CHNP016": {
+    "name": "河南"
+  },
+
+  "CHNP017": {
+    "name": "湖北"
+  },
+
+  "CHNP018": {
+    "name": "湖南",
+    "lucky": "",
+    "lottery": "抽奖的activityid"
+  },
+
+  "CHNP019": {
+    "name": "广东"
+  },
+
+  "CHNP020": {
+    "name": "广西"
+  },
+
+  "CHNP021": {
+    "name": "海南"
+  },
+
+  "CHNP022": {
+    "name": "重庆"
+  },
+
+  "CHNP023": {
+    "name": "四川"
+  },
+
+  "CHNP024": {
+    "name": "贵州"
+  },
+
+  "CHNP025": {
+    "name": "云南"
+  },
+
+  "CHNP026": {
+    "name": "西藏"
+  },
+
+  "CHNP027": {
+    "name": "陕西"
+  },
+
+  "CHNP028": {
+    "name": "甘肃"
+  },
+
+  "CHNP029": {
+    "name": "青海"
+  },
+
+  "CHNP030": {
+    "name": "宁夏"
+  },
+
+  "CHNP031": {
+    "name": "新疆"
+  },
+
+  "CHNP032": {
+    "name": "香港"
+  },
+
+  "CHNP033": {
+    "name": "澳门"
+  },
+
+  "CHNP034": {
+    "name": "台湾"
+  },
+
+  "CHNP035": {
+    "name": "东海省"
+  }
+}

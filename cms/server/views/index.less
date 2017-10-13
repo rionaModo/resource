@@ -1,0 +1,832 @@
+@import "/funclib.less";
+.act-box {
+  background-position: center 0;
+  overflow: hidden;
+  .container {
+    height: 100%;
+    width: 1000px;
+    position: relative;
+  }
+}
+.activity-banner {
+  background: url('./images/activity_banner.png') center 0 no-repeat;height:562px;
+}
+/**
+ * 抢红包
+ */
+.lucky-area {
+  background: url('./images/bg_qianghongbao.png') center 0 no-repeat;
+  height: 561px;
+  .award-list {
+    width: 396px;
+    position: absolute;
+    bottom: 10px;
+    right: 30px; 
+  }
+
+  .lucky-activity {
+    position: absolute;
+    width: 465px;
+    height: 550px;
+    left: 55px;
+    background: url("./images/activity/lucky_bg.png") 0 0 no-repeat;
+    .lamp-board {
+      width: 440px;
+      height: 478px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    .btn {
+      width: 188px;
+      height: 68px;
+      line-height: 68px;
+      position: absolute;
+      top: 342px;
+      left:50%;
+      margin-left: -94px;
+      color: #666464;
+      text-align: center;
+      font-size: 33px;
+      cursor: pointer;
+    }
+    .btn_rob {
+      background: url("./images/btn_rob.png") center center no-repeat;
+      background-size: 100% 100%;
+      &:hover {
+        background: url("./images/btn_rob_hover.png") center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .btn_gray{
+      background: url("./images/activity/grey-btn.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+    .btn_coming{
+      background: url("./images/activity/coming.png") center center no-repeat;
+      background-size: 100% 100%;
+      width: 347px;
+      height: 80px;
+      margin-left: -174px;
+      top: 282px;
+    }
+    .btn_end {
+      background: url("./images/btn_actend.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+    .btn_out {
+      background: url("./images/btn_robout.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .timebar {
+      width: 397px;
+      height: 47px;
+      background: url('./images/luck_timebar.jpg') 0 0 no-repeat;
+      left: 37px;
+      bottom: 40px;
+      
+      .time-item {
+        font-size: 30px;
+        width: 30px;
+        margin-left: 2px;
+      }
+      .time-group {
+        margin-top: 2px;
+      }
+      .hour {
+        margin-left: 120px;
+      }
+      .min {
+        margin-left: 30px;
+      }
+      .sec {
+        margin-left: 28px;
+      }
+    }
+
+  }
+  
+  .coming-soon {
+    left: 37px;
+    bottom: 40px;
+  }
+
+  .btn-viewrule {
+    right: 295px;
+    bottom: 302px;
+  }
+}
+.coming-soon {
+  position: absolute;
+  color: #fedf82;
+  font-size: 21px;
+  width: 406px;
+  text-align: center;
+}
+/**
+ * 抽奖区
+ */
+.lottery-area {
+  background: url('./images/activity/bg_lottery.png') center 0 no-repeat;
+  height: 919px;
+  
+  .coming-soon{
+    top: 150px;
+    left: 90px;
+  }
+  .timebar {
+    height: 65px;
+    width: 479px;
+    background: url("./images/lottery_time_bar.png") 0 0 no-repeat;
+
+    position: absolute;
+    left: 67px;
+    top: 139px;
+
+    .time-item {
+      font-size: 36px;
+      width: 35px;
+      margin-left: 3px;
+    }
+    .time-group {
+      margin-top: 10px;
+    }
+    .hour {
+      margin-left: 80px;
+    }
+    .min {
+      margin-left: 36px;
+    }
+    .sec {
+      margin-left: 34px;
+    }
+
+  }
+
+  .lottery {
+    width: 520px;
+    height: 635px;
+
+    position: absolute;
+    left: 40px;
+    top: 216px;
+    
+    .bg_board {
+      background: url('./images/lottery_board.png') 0 0 no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .chance-left {
+      font-size: 28px;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 50px;
+
+      strong {
+        font-size: 32px;
+        color: #fce37e;
+        margin: 0 15px;
+      }
+    }
+    .lottery-award {
+      width: 418px;
+      height: 418px;
+      background: url('./images/lottery_award.png') 0 0 no-repeat;
+      position: absolute;
+      left: 52px;
+      top: 52px;
+      z-index: 0;
+    }
+  .lottery-btn{
+    width: 418px;
+    height: 418px;
+    position: absolute;
+    left: 52px;
+    top: 52px;
+    z-index: 1;
+  }
+  .lottery-btnshow {
+      width: 136px;
+      height: 140px;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left:50%;
+      margin-left: -68px;
+      margin-top: -70px;
+    
+      .face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+      .pointer {
+        width: 94px;
+        height: 75px;
+        position: absolute;
+        .abmid_hr(94px);
+        top: -30px;
+        z-index: 0;
+      }
+    }
+    .active {
+      .face {
+        background: url('./images/btn_lot_active.png') 0 0 no-repeat;
+      }
+      &:hover {
+        .face {
+          background: url("./images/btn_lot_hover.png") 0 0 no-repeat;
+        }
+      }
+      .pointer {
+        background: url('./images/pointer_active.png') 0 0 no-repeat;
+      }
+    }
+    .disable,
+    .disable-canshowrule,
+    .disable-nochance {
+      .face {
+        background: url('./images/btn_lot_disable.png') 0 0 no-repeat;
+      }
+      .pointer {
+        background: url('./images/ponter_disable.png') 0 0 no-repeat;
+      }
+    }
+  }
+
+  .award-list {
+    position: absolute;
+    right: 0px;
+    bottom: 66px;
+    width: 395px;
+  }
+
+  .btn-viewrule {
+    left: 0px;
+    bottom: -50px;
+    font-style: initial;
+  }
+
+  .lamp-board {
+    position: absolute;
+    left: 260px;
+    top: 260px;
+    z-index: 5;
+  }
+}
+
+/**
+ * 月奖
+ */
+.act-month {
+  background: url('./images/bg_month.jpg') center 0 no-repeat;
+  height: 604px;
+  .btn-viewrule {
+    right: 255px;
+    bottom: 260px;
+  }
+}
+/**
+ * 注册奖
+ */
+.act-reg {
+  background: url('./images/bg_reg.jpg') center 0 no-repeat;
+  height: 641px;
+
+  .btn-viewrule {
+    right: 272px;
+    bottom: 286px;
+  }
+}
+
+
+.lamp-board {
+  position: relative;
+
+  .lamp {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    background: url("./images/lamp.png") 0 0 no-repeat;
+  }
+  @offset-x: -34px - (-6px); //此次切图为 28px 29px 的偏移
+  @offset-y: -82px - (-53px); 
+
+  .yellow {
+    background-position: -(34px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(34px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .blue {
+    background-position: -(104px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(104px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .green {
+    background-position: -(180px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(180px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .purple {
+    background-position: -(252px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(252px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+}
+
+.btn-viewrule {
+  position: absolute;
+  width: 129px;
+  height: 41px;
+  color: #fcdd4f;
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+ // background: url("./images/btn_viewrule.png") 0 0 no-repeat;
+
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-viewrule-bg{
+  background: url("./images/btn_viewrule.png") 0 0 no-repeat;
+  &:hover {
+    background: url("./images/btn_viewrule_hover.png") 0 0 no-repeat;
+  }
+}
+
+
+.timebar {
+  position: absolute;
+
+  .time-item {
+    float: left;
+    color: #eee17a;
+    text-align: center;
+  }
+  .time-group {
+    float: left;
+  }
+
+}
+
+#loginpanel {
+  width: 514px;
+  height: 318px;
+  background: url('./images/login_panel.png') 0 0 no-repeat;
+  position: relative;
+  .gologin {
+    display: block;
+    position: absolute;
+    width: 178px;
+    height: 50px;
+    .abmid_hr(178px);
+    bottom: 37px;
+  }
+}
+
+.rule-panel{
+  width: 874px;
+  height: 664px;
+  position: relative;
+  background: url('./images/activity/reel_bg_noti.png') 0 0 no-repeat;
+  .close {
+    width: 122px;
+    height: 42px;
+    background: url('./images/btn_close.png') 0 0 no-repeat;    
+    position: absolute;
+    .abmid_hr(122px);
+    bottom: 60px;
+  }
+  .wrap{
+    width: 754px;
+    height: 426px;
+    overflow: hidden;
+    left: 54px;
+    top: 104px;
+    padding: 8px;
+    position: absolute;
+    p {
+      color: #560303;
+      font-size: 16px;
+      line-height: 2;
+      a {
+        color: #0000FF;
+      }
+    }
+    .rule-content {
+      height: 338px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      padding: 88px 5px 0 22px;
+    }
+  }
+  .title {
+    font-size: 26px;
+    color: #a70404;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 55px;
+  }
+}
+
+.couponshow {
+  .wrap {
+    width: 450px;
+    .btn_ok {
+      display: block;
+      width: 143px;
+      height: 38px;
+      background: url("./images/btn_ok.png") 0 0 no-repeat;
+      margin-top: 15px;
+      margin-left: 158px;
+    }
+  }
+  .coupon {
+    position: relative;
+    width: 450px;
+    height: 386px;
+    background: url("./images/coupon_amout.png") 0 0 no-repeat;
+    .amount {
+      color: #fff;
+      font-size: 39px;
+      position: absolute;
+      left: 138px;
+      top: 289px;
+      width: 183px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.popup {
+  width: 285px;
+  height: 281px;
+  overflow: hidden;
+  background: url("./images/popup_bg.png") 0 0 no-repeat;
+  .close {
+    float: left;
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin-left: 68px;
+    margin-top: 214px;
+  }
+  .text {
+    font-size: 20px;
+    color: #ba1533;
+    position: absolute;
+    left: 0;
+    top: 160px;
+    width: 100%;
+    text-align: center;
+  }
+}
+.thankyou {
+  width: 195px;
+  height: 363px;
+  overflow: hidden;
+  background: url("./images/popup_thankyou.png") 0 0 no-repeat;
+  .close {
+    float: left;
+    display: block;
+    width: 192px;
+    height: 51px;
+    margin-top: 312px;
+  }
+}
+
+//优化新增
+.luck-rob-btn{
+  background: url("./images/activity/rob_btn_up.png") center center no-repeat;
+  background-size: 100% 100%;
+  width:188px ;
+  height: 241px;
+  position: absolute;
+  top:90px;
+  left: 50%;
+  margin-left: -94px;
+}
+.chance-tips{
+  z-index: 555;
+  position: absolute;
+  bottom: 18px;
+  left:0;
+  width: 100%;
+  font-family: "微软雅黑";
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+}
+.prize-tips{
+  font-style: oblique;
+  left: 626px;
+  top: 430px;
+  position: absolute;
+  width: 370px;
+  min-height: 41px;
+  font-size: 27px;
+  color: #fcdf58;
+}
+.act-month {
+  .mouth-top.btn-viewrule {
+    background: url("./images/activity/mouth-btn.png") center center no-repeat;
+    line-height: 41px;
+    text-decoration: none;
+    width: 143px;
+    bottom: 135px;
+    text-align: center;
+    color: #b41c1d;
+    right: 0px;
+    &:hover{
+      //background: url("./images/activity/mouth-btn-hr.png") center center/100% 100% no-repeat;
+    }
+  }
+}
+.activity-rule{
+  background: url("./images/activity/activity-rule.png")  no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 30px;
+  top: 125px;
+  width:217px;
+  height: 38px;
+  z-index:44;
+}
+.left-close{
+  z-index: 44;
+  width: 35px;
+  height: 35px;
+  background: url("./images/activity/riUp-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 48px;
+  top: 48px;
+  cursor: pointer;
+}
+
+.mouth-reg-layer.rule-panel {
+  .rule_layer_c{
+    display: none;
+  }
+  .activity-rule {
+     display: none
+  }
+  .wrap {
+     .rule-content {
+        height: 412px;
+        padding: 14px 18px 0px;
+       dt,dd{
+         padding: 5px 0;
+         color: #560303;
+         font-size: 16px;
+       }
+       dd{
+         padding-left: 5px;
+       }
+     }
+  }
+}
+
+.rule-panel.rob-layer.more_one{
+  .rule-content-rob{
+    bottom: 80px;
+  }
+}
+.rule-panel.rob-layer {
+  .title{
+    display: none;
+  }
+  .left-close{
+    right: 11px;
+    top: 42px;
+  }
+  .close{
+    background: url("./images/activity/close-btn.png") center center no-repeat;
+    background-size: 100% 100%;
+    width: 167px;
+    line-height: 58px;
+    color: #874007;
+    font-size: 28px;
+    text-align: center;
+    height: 58px;
+    left: 50%;
+    margin-left: -83px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 454;
+  }
+   .rule-content-rob{
+      font-size: 16px;
+      color: #444;
+      bottom: 70px;
+     line-height: 25.5px;
+      left: 0px;
+      position: absolute;
+       width:100% ;
+     text-align: center;
+     height: 50px;
+     .rob_my_minutes{
+       position: absolute;
+       width: 100%;
+       top: -142px;
+       left: 0;
+       color: #101010;
+       font-size: 46px;
+       height: 60px;
+       line-height: 60px;
+       text-align: center;
+     }
+   }
+   width: 485px;
+   height: 381px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -190px;
+  margin-left: -242px;
+   background: url("./images/activity/sorry.png") center center no-repeat;
+   background-size: 100% 100%;
+}
+.rule-panel.luckNoChance{
+  background: url("./images/activity/nochance.png") center center no-repeat;
+  background-size: 100% 100%;
+  .rule-content-rob{
+    bottom: 70px;
+  }
+}
+.rule-panel.rob_all.rob-layer{
+  .rule-content-rob{
+    bottom: 80px;
+  }
+}
+.rule-panel.luck_money{
+  .rob_my_minutes{
+    
+  }
+  .close,.left-close{
+    display: none;
+  }
+  .rule-content-rob{
+    bottom: 40px;
+  }
+  .rob_my_tip {
+    span{
+     color: #a70403;
+      font-size: 16px;
+    }
+  }
+  .rob_my_time_m{
+    color: #a70403;
+    font-size: 16px;
+  }
+  .rob_my_time{
+    span{
+      color: #a70403;
+      font-size: 16px;
+    }
+  }
+  background: url("./images/activity/time.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.rob_money{
+  background: url("./images/activity/rob.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 506px;
+  height: -206px;
+  .rule-content-rob{
+    bottom: 91px;
+    text-indent: 30px;
+  }
+  .money-title{
+    position: absolute;
+    font-weight: bold;
+    width: 100%;
+    left:0px;
+    bottom: 187px;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    span{
+      font-size: 36px;
+      padding-left: 21px;
+      padding-right: 3px;
+    }
+  }
+  .rob_my_tip {
+    span{
+      color: #a70403;
+      font-size: 16px;
+    }
+  }
+}
+//additional_award st
+.rule-panel.additional_cop,.rule-panel.additional_packet{
+  background: url("./images/activity/additional_cop.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 506px;
+  height: -206px;
+  .rule-content-rob{
+    bottom: 91px;
+    height: 190px;
+    .additional_content{
+      height: 120px;
+      margin-bottom: 20px;
+      .additional_cop_left{
+        color: #fff;
+        width: 125px;
+        margin-left: 75px;
+        float: left;
+        text-align: center;
+        .additional_title{
+          margin-top: 18px;
+          margin-bottom: 5px;
+        }
+        .money-line{
+          font-size: 34px;
+          span{
+            font-size: 16px;
+          }
+        }
+        .additional_ad{
+          font-size: 12px;
+        }
+      }
+      .additional_cop_right{
+        text-align: left;
+        width:236px;
+        padding: 10px;
+        float: left;
+        .additional-title{
+          margin-top: 7px;
+          margin-bottom: 5px;
+          font-size: 12px;
+          color: #888888;
+        }
+        .money-icon{
+          font-size: 26px;
+        }
+        .additional_shop{
+          overflow: hidden;
+          white-space: nowrap;
+          color: #444;
+          font-size: 16px;
+        }
+        .additional_list{
+          font-size: 14px;
+          color: #888888;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .rob_my_tip{
+    color: #a70403;
+    span{
+      font-size: 16px;
+    }
+  }
+}
+.rule-panel.additional_packet {
+  background: url("./images/activity/additional_packet.png") center center no-repeat;
+}
+//additional_award end
+.rule-panel.rob_all{
+  background: url("./images/activity/nopriza.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.luckNoChance.NoChanceStyle{
+  .rule-content-rob{
+    bottom: 88px;
+  }
+}
+.rule_layer_c{
+  position: absolute;
+  background: url('./images/activity/bg.png') 0 0 repeat-x;
+  height: 60px;
+  width: 731px;
+  z-index: 2;
+  left: 12px;
+  top: 1px;
+}

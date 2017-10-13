@@ -1,0 +1,62 @@
+@import "../inc/common.less";
+
+@activity-color: #af1f27;
+body {
+  background: @activity-color;
+}
+
+.award-list {
+  width: 500px;
+  
+  .title {
+    font-size: 26px;
+    color: #eee17a;
+  }
+
+  .list-table {
+    border: 1px solid #c93e34;
+    border-radius: 4px;
+    background-color: #b30930;
+    padding: 8px;
+    margin-top: 15px;
+    @row-height: 40px;
+    
+    .wrap {
+      max-height: @row-height * 5;
+      overflow: hidden;
+    }
+    .list-wrap {
+      height: @row-height * 4;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .row {
+      height: @row-height;
+      line-height: @row-height;
+
+      background-color: #fff;
+      font-size: 14px;
+      color: #9a0b2a;
+      &.even {
+        background-color: #fee9e7;
+      }
+      &.padding {
+        height: @row-height / 2;
+      }
+      .col {
+        width: 33%;
+        float: left;
+        text-align: center;
+      }
+
+    }
+
+    .head {
+      background-color: #e65244;
+      font-size: 16px;
+      color: #fff;
+    }
+
+  }
+}

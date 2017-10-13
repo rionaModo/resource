@@ -1,0 +1,774 @@
+/*
+@file funclib.less
+@author 
+@date 2013-10-13
+@description 定义一些常用的less 函数
+*/
+.act-box {
+  background-position: center 0;
+  overflow: hidden;
+}
+.act-box .container {
+  height: 100%;
+  width: 1000px;
+  position: relative;
+}
+.activity-banner {
+  background: url('/static/images/activity_banner.png') center 0 no-repeat;
+  height: 562px;
+}
+/**
+ * 抢红包
+ */
+.lucky-area {
+  background: url('/static/images/bg_qianghongbao.png') center 0 no-repeat;
+  height: 561px;
+}
+.lucky-area .award-list {
+  width: 396px;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+.lucky-area .lucky-activity {
+  position: absolute;
+  width: 465px;
+  height: 550px;
+  left: 55px;
+  background: url("/static/images/activity/lucky_bg.png") 0 0 no-repeat;
+}
+.lucky-area .lucky-activity .lamp-board {
+  width: 440px;
+  height: 478px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.lucky-area .lucky-activity .btn {
+  width: 188px;
+  height: 68px;
+  line-height: 68px;
+  position: absolute;
+  top: 342px;
+  left: 50%;
+  margin-left: -94px;
+  color: #666464;
+  text-align: center;
+  font-size: 33px;
+  cursor: pointer;
+}
+.lucky-area .lucky-activity .btn_rob {
+  background: url("/static/images/btn_rob.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-area .lucky-activity .btn_rob:hover {
+  background: url("/static/images/btn_rob_hover.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-area .lucky-activity .btn_gray {
+  background: url("/static/images/activity/grey-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-area .lucky-activity .btn_coming {
+  background: url("/static/images/activity/coming.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 347px;
+  height: 80px;
+  margin-left: -174px;
+  top: 282px;
+}
+.lucky-area .lucky-activity .btn_end {
+  background: url("/static/images/btn_actend.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-area .lucky-activity .btn_out {
+  background: url("/static/images/btn_robout.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-area .lucky-activity .timebar {
+  width: 397px;
+  height: 47px;
+  background: url('/static/images/luck_timebar.jpg') 0 0 no-repeat;
+  left: 37px;
+  bottom: 40px;
+}
+.lucky-area .lucky-activity .timebar .time-item {
+  font-size: 30px;
+  width: 30px;
+  margin-left: 2px;
+}
+.lucky-area .lucky-activity .timebar .time-group {
+  margin-top: 2px;
+}
+.lucky-area .lucky-activity .timebar .hour {
+  margin-left: 120px;
+}
+.lucky-area .lucky-activity .timebar .min {
+  margin-left: 30px;
+}
+.lucky-area .lucky-activity .timebar .sec {
+  margin-left: 28px;
+}
+.lucky-area .coming-soon {
+  left: 37px;
+  bottom: 40px;
+}
+.lucky-area .btn-viewrule {
+  right: 295px;
+  bottom: 302px;
+}
+.coming-soon {
+  position: absolute;
+  color: #fedf82;
+  font-size: 21px;
+  width: 406px;
+  text-align: center;
+}
+/**
+ * 抽奖区
+ */
+.lottery-area {
+  background: url('/static/images/activity/bg_lottery.png') center 0 no-repeat;
+  height: 919px;
+}
+.lottery-area .coming-soon {
+  top: 150px;
+  left: 90px;
+}
+.lottery-area .timebar {
+  height: 65px;
+  width: 479px;
+  background: url("/static/images/lottery_time_bar.png") 0 0 no-repeat;
+  position: absolute;
+  left: 67px;
+  top: 139px;
+}
+.lottery-area .timebar .time-item {
+  font-size: 36px;
+  width: 35px;
+  margin-left: 3px;
+}
+.lottery-area .timebar .time-group {
+  margin-top: 10px;
+}
+.lottery-area .timebar .hour {
+  margin-left: 80px;
+}
+.lottery-area .timebar .min {
+  margin-left: 36px;
+}
+.lottery-area .timebar .sec {
+  margin-left: 34px;
+}
+.lottery-area .lottery {
+  width: 520px;
+  height: 635px;
+  position: absolute;
+  left: 40px;
+  top: 216px;
+}
+.lottery-area .lottery .bg_board {
+  background: url('/static/images/lottery_board.png') 0 0 no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lottery-area .lottery .chance-left {
+  font-size: 28px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+}
+.lottery-area .lottery .chance-left strong {
+  font-size: 32px;
+  color: #fce37e;
+  margin: 0 15px;
+}
+.lottery-area .lottery .lottery-award {
+  width: 418px;
+  height: 418px;
+  background: url('/static/images/lottery_award.png') 0 0 no-repeat;
+  position: absolute;
+  left: 52px;
+  top: 52px;
+  z-index: 0;
+}
+.lottery-area .lottery .lottery-btn {
+  width: 418px;
+  height: 418px;
+  position: absolute;
+  left: 52px;
+  top: 52px;
+  z-index: 1;
+}
+.lottery-area .lottery .lottery-btnshow {
+  width: 136px;
+  height: 140px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin-left: -68px;
+  margin-top: -70px;
+}
+.lottery-area .lottery .lottery-btnshow .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.lottery-area .lottery .lottery-btnshow .pointer {
+  width: 94px;
+  height: 75px;
+  position: absolute;
+  left: 50%;
+  margin-left: -47px;
+  top: -30px;
+  z-index: 0;
+}
+.lottery-area .lottery .active .face {
+  background: url('/static/images/btn_lot_active.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .active:hover .face {
+  background: url("/static/images/btn_lot_hover.png") 0 0 no-repeat;
+}
+.lottery-area .lottery .active .pointer {
+  background: url('/static/images/pointer_active.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .disable .face,
+.lottery-area .lottery .disable-canshowrule .face,
+.lottery-area .lottery .disable-nochance .face {
+  background: url('/static/images/btn_lot_disable.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .disable .pointer,
+.lottery-area .lottery .disable-canshowrule .pointer,
+.lottery-area .lottery .disable-nochance .pointer {
+  background: url('/static/images/ponter_disable.png') 0 0 no-repeat;
+}
+.lottery-area .award-list {
+  position: absolute;
+  right: 0px;
+  bottom: 66px;
+  width: 395px;
+}
+.lottery-area .btn-viewrule {
+  left: 0px;
+  bottom: -50px;
+  font-style: initial;
+}
+.lottery-area .lamp-board {
+  position: absolute;
+  left: 260px;
+  top: 260px;
+  z-index: 5;
+}
+/**
+ * 月奖
+ */
+.act-month {
+  background: url('/static/images/bg_month.jpg') center 0 no-repeat;
+  height: 604px;
+}
+.act-month .btn-viewrule {
+  right: 255px;
+  bottom: 260px;
+}
+/**
+ * 注册奖
+ */
+.act-reg {
+  background: url('/static/images/bg_reg.jpg') center 0 no-repeat;
+  height: 641px;
+}
+.act-reg .btn-viewrule {
+  right: 272px;
+  bottom: 286px;
+}
+.lamp-board {
+  position: relative;
+}
+.lamp-board .lamp {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  background: url("/static/images/lamp.png") 0 0 no-repeat;
+}
+.lamp-board .yellow {
+  background-position: -6px 5px;
+}
+.lamp-board .yellow.on {
+  background-position: -6px -53px;
+}
+.lamp-board .blue {
+  background-position: -76px 5px;
+}
+.lamp-board .blue.on {
+  background-position: -76px -53px;
+}
+.lamp-board .green {
+  background-position: -152px 5px;
+}
+.lamp-board .green.on {
+  background-position: -152px -53px;
+}
+.lamp-board .purple {
+  background-position: -224px 5px;
+}
+.lamp-board .purple.on {
+  background-position: -224px -53px;
+}
+.btn-viewrule {
+  position: absolute;
+  width: 129px;
+  height: 41px;
+  color: #fcdd4f;
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn-viewrule:hover {
+  color: #fff;
+}
+.btn-viewrule-bg {
+  background: url("/static/images/btn_viewrule.png") 0 0 no-repeat;
+}
+.btn-viewrule-bg:hover {
+  background: url("/static/images/btn_viewrule_hover.png") 0 0 no-repeat;
+}
+.timebar {
+  position: absolute;
+}
+.timebar .time-item {
+  float: left;
+  color: #eee17a;
+  text-align: center;
+}
+.timebar .time-group {
+  float: left;
+}
+#loginpanel {
+  width: 514px;
+  height: 318px;
+  background: url('/static/images/login_panel.png') 0 0 no-repeat;
+  position: relative;
+}
+#loginpanel .gologin {
+  display: block;
+  position: absolute;
+  width: 178px;
+  height: 50px;
+  left: 50%;
+  margin-left: -89px;
+  bottom: 37px;
+}
+.rule-panel {
+  width: 874px;
+  height: 664px;
+  position: relative;
+  background: url('/static/images/activity/reel_bg_noti.png') 0 0 no-repeat;
+}
+.rule-panel .close {
+  width: 122px;
+  height: 42px;
+  background: url('/static/images/btn_close.png') 0 0 no-repeat;
+  position: absolute;
+  left: 50%;
+  margin-left: -61px;
+  bottom: 60px;
+}
+.rule-panel .wrap {
+  width: 754px;
+  height: 426px;
+  overflow: hidden;
+  left: 54px;
+  top: 104px;
+  padding: 8px;
+  position: absolute;
+}
+.rule-panel .wrap p {
+  color: #560303;
+  font-size: 16px;
+  line-height: 2;
+}
+.rule-panel .wrap p a {
+  color: #0000FF;
+}
+.rule-panel .wrap .rule-content {
+  height: 338px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  padding: 88px 5px 0 22px;
+}
+.rule-panel .title {
+  font-size: 26px;
+  color: #a70404;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 55px;
+}
+.couponshow .wrap {
+  width: 450px;
+}
+.couponshow .wrap .btn_ok {
+  display: block;
+  width: 143px;
+  height: 38px;
+  background: url("/static/images/btn_ok.png") 0 0 no-repeat;
+  margin-top: 15px;
+  margin-left: 158px;
+}
+.couponshow .coupon {
+  position: relative;
+  width: 450px;
+  height: 386px;
+  background: url("/static/images/coupon_amout.png") 0 0 no-repeat;
+}
+.couponshow .coupon .amount {
+  color: #fff;
+  font-size: 39px;
+  position: absolute;
+  left: 138px;
+  top: 289px;
+  width: 183px;
+  text-align: center;
+  font-weight: bold;
+}
+.popup {
+  width: 285px;
+  height: 281px;
+  overflow: hidden;
+  background: url("/static/images/popup_bg.png") 0 0 no-repeat;
+}
+.popup .close {
+  float: left;
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin-left: 68px;
+  margin-top: 214px;
+}
+.popup .text {
+  font-size: 20px;
+  color: #ba1533;
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 100%;
+  text-align: center;
+}
+.thankyou {
+  width: 195px;
+  height: 363px;
+  overflow: hidden;
+  background: url("/static/images/popup_thankyou.png") 0 0 no-repeat;
+}
+.thankyou .close {
+  float: left;
+  display: block;
+  width: 192px;
+  height: 51px;
+  margin-top: 312px;
+}
+.luck-rob-btn {
+  background: url("/static/images/activity/rob_btn_up.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 188px ;
+  height: 241px;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  margin-left: -94px;
+}
+.chance-tips {
+  z-index: 555;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 100%;
+  font-family: "微软雅黑";
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+}
+.prize-tips {
+  font-style: oblique;
+  left: 626px;
+  top: 430px;
+  position: absolute;
+  width: 370px;
+  min-height: 41px;
+  font-size: 27px;
+  color: #fcdf58;
+}
+.act-month .mouth-top.btn-viewrule {
+  background: url("/static/images/activity/mouth-btn.png") center center no-repeat;
+  line-height: 41px;
+  text-decoration: none;
+  width: 143px;
+  bottom: 135px;
+  text-align: center;
+  color: #b41c1d;
+  right: 0px;
+}
+.activity-rule {
+  background: url("/static/images/activity/activity-rule.png") no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 30px;
+  top: 125px;
+  width: 217px;
+  height: 38px;
+  z-index: 44;
+}
+.left-close {
+  z-index: 44;
+  width: 35px;
+  height: 35px;
+  background: url("/static/images/activity/riUp-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 48px;
+  top: 48px;
+  cursor: pointer;
+}
+.mouth-reg-layer.rule-panel .rule_layer_c {
+  display: none;
+}
+.mouth-reg-layer.rule-panel .activity-rule {
+  display: none;
+}
+.mouth-reg-layer.rule-panel .wrap .rule-content {
+  height: 412px;
+  padding: 14px 18px 0px;
+}
+.mouth-reg-layer.rule-panel .wrap .rule-content dt,
+.mouth-reg-layer.rule-panel .wrap .rule-content dd {
+  padding: 5px 0;
+  color: #560303;
+  font-size: 16px;
+}
+.mouth-reg-layer.rule-panel .wrap .rule-content dd {
+  padding-left: 5px;
+}
+.rule-panel.rob-layer.more_one .rule-content-rob {
+  bottom: 80px;
+}
+.rule-panel.rob-layer {
+  width: 485px;
+  height: 381px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -190px;
+  margin-left: -242px;
+  background: url("/static/images/activity/sorry.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.rob-layer .title {
+  display: none;
+}
+.rule-panel.rob-layer .left-close {
+  right: 11px;
+  top: 42px;
+}
+.rule-panel.rob-layer .close {
+  background: url("/static/images/activity/close-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 167px;
+  line-height: 58px;
+  color: #874007;
+  font-size: 28px;
+  text-align: center;
+  height: 58px;
+  left: 50%;
+  margin-left: -83px;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 454;
+}
+.rule-panel.rob-layer .rule-content-rob {
+  font-size: 16px;
+  color: #444;
+  bottom: 70px;
+  line-height: 25.5px;
+  left: 0px;
+  position: absolute;
+  width: 100% ;
+  text-align: center;
+  height: 50px;
+}
+.rule-panel.rob-layer .rule-content-rob .rob_my_minutes {
+  position: absolute;
+  width: 100%;
+  top: -142px;
+  left: 0;
+  color: #101010;
+  font-size: 46px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.rule-panel.luckNoChance {
+  background: url("/static/images/activity/nochance.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.luckNoChance .rule-content-rob {
+  bottom: 70px;
+}
+.rule-panel.rob_all.rob-layer .rule-content-rob {
+  bottom: 80px;
+}
+.rule-panel.luck_money {
+  background: url("/static/images/activity/time.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.luck_money .close,
+.rule-panel.luck_money .left-close {
+  display: none;
+}
+.rule-panel.luck_money .rule-content-rob {
+  bottom: 40px;
+}
+.rule-panel.luck_money .rob_my_tip span {
+  color: #a70403;
+  font-size: 16px;
+}
+.rule-panel.luck_money .rob_my_time_m {
+  color: #a70403;
+  font-size: 16px;
+}
+.rule-panel.luck_money .rob_my_time span {
+  color: #a70403;
+  font-size: 16px;
+}
+.rule-panel.rob_money {
+  background: url("/static/images/activity/rob.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 506px;
+  height: -206px;
+}
+.rule-panel.rob_money .rule-content-rob {
+  bottom: 91px;
+  text-indent: 30px;
+}
+.rule-panel.rob_money .money-title {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  left: 0px;
+  bottom: 187px;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+}
+.rule-panel.rob_money .money-title span {
+  font-size: 36px;
+  padding-left: 21px;
+  padding-right: 3px;
+}
+.rule-panel.rob_money .rob_my_tip span {
+  color: #a70403;
+  font-size: 16px;
+}
+.rule-panel.additional_cop,
+.rule-panel.additional_packet {
+  background: url("/static/images/activity/additional_cop_ea74899.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 506px;
+  height: -206px;
+}
+.rule-panel.additional_cop .rule-content-rob,
+.rule-panel.additional_packet .rule-content-rob {
+  bottom: 91px;
+  height: 190px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content,
+.rule-panel.additional_packet .rule-content-rob .additional_content {
+  height: 120px;
+  margin-bottom: 20px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_left,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_left {
+  color: #fff;
+  width: 125px;
+  margin-left: 75px;
+  float: left;
+  text-align: center;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_left .additional_title,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_left .additional_title {
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_left .money-line,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_left .money-line {
+  font-size: 34px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_left .money-line span,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_left .money-line span {
+  font-size: 16px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_left .additional_ad,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_left .additional_ad {
+  font-size: 12px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_right,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_right {
+  text-align: left;
+  width: 236px;
+  padding: 10px;
+  float: left;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_right .additional-title,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_right .additional-title {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #888888;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_right .additional_shop,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_right .additional_shop {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #444;
+  font-size: 16px;
+}
+.rule-panel.additional_cop .rule-content-rob .additional_content .additional_cop_right .additional_list,
+.rule-panel.additional_packet .rule-content-rob .additional_content .additional_cop_right .additional_list {
+  font-size: 14px;
+  color: #888888;
+}
+.rule-panel.additional_cop .rob_my_tip,
+.rule-panel.additional_packet .rob_my_tip {
+  color: #a70403;
+}
+.rule-panel.additional_cop .rob_my_tip span,
+.rule-panel.additional_packet .rob_my_tip span {
+  font-size: 16px;
+}
+.rule-panel.additional_packet {
+  background: url("/static/images/activity/additional_packet_8b86c69.png") center center no-repeat;
+}
+.rule-panel.rob_all {
+  background: url("/static/images/activity/nopriza.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.rule-panel.luckNoChance.NoChanceStyle .rule-content-rob {
+  bottom: 88px;
+}
+.rule_layer_c {
+  position: absolute;
+  background: url('/static/images/activity/bg.png') 0 0 repeat-x;
+  height: 60px;
+  width: 731px;
+  z-index: 2;
+  left: 12px;
+  top: 1px;
+}

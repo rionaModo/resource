@@ -1,0 +1,431 @@
+@import "/common/inc/reset.less";
+@import "/common/inc/mreset.less";
+
+.Mmain{
+  display: none;
+}
+.invalidLinked{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  .pcNolink{
+    margin: 0 auto;
+    width: 274px;
+    height: 283px;
+    background: url("/images/businesscoupon/nolinked.png") 0 0 no-repeat;
+    background-position: center center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -142px;
+    margin-left: -137px;
+    a{
+      display: inline-block;
+      position: absolute;
+      width: 119px;
+      height: 35px;
+      cursor: pointer;
+      left:50%;
+      bottom: 0;
+      margin-left: -60px;
+    }
+  }
+  .mNolink{
+    display: none;
+    margin: 0 auto;
+    width: 2.35rem;
+    height: 2.12rem;
+    background: url("/images/businesscoupon/mNolinked.png") 0 0 no-repeat;
+    background-position: center center;
+    background-size: 2.35rem 2.12rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -1.18rem;
+    margin-left: -1.06rem;
+    a{
+      display: inline-block;
+      position: absolute;
+      width: 1.12rem;
+      height: .39rem;
+      cursor: pointer;
+      left:50%;
+      bottom: 0;
+      margin-left: -.56rem;
+    }
+  }
+}
+
+.main{
+  .mainCenter{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .sub_nav {
+    height: 50px;
+    background: #eeeded;
+    ul {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    li {
+      line-height: 50px;
+      display: block;
+      float: right;
+      color: #434343;
+      .home {
+        padding-left: 20px !important;
+        background: url(/images/businesscoupon/ico_11.png) no-repeat 0px 2px;
+      }
+      a{
+        padding: 0 5px;
+        color: #434343;
+        font-size: 14px;
+      }
+    }
+    li.left{
+      float: left;
+    }
+  }
+  .clink-tit{
+    margin-top: 88px;
+    height: 291px;
+    width: 1200px;
+    position: relative;
+    background: url("/images/businesscoupon/couface.png") 0 0 no-repeat;
+    background-position: center center;
+  }
+  .clink-tit.couface{
+    background: url("/images/businesscoupon/couface.png") 0 0 no-repeat;
+    background-position: center center;
+    .coupon-info,.cgetInfos{
+      display: none;
+    }
+  }
+  .clink-tit.tipscouface{
+    background: url("/images/businesscoupon/couface.png") 0 0 no-repeat;
+    background-position: center center;
+    .coupon-info{
+      display: none;
+    }
+  }
+  .clink-tit.clink-geted{
+    background: url("/images/businesscoupon/geted.png") 0 0 no-repeat;
+    background-position: center center;
+  }
+  .clink-tit.clink-getIt{
+    background: url("/images/businesscoupon/getIt.png") 0 0 no-repeat;
+    background-position: center center;
+  }
+  .clink-tit.clink-getedAll{
+    background: url("/images/businesscoupon/getedAll.png") 0 0 no-repeat;
+    background-position: center center;
+  }
+  .title-info{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 540px;
+    input{
+      border: 1px solid #bebebe;
+      height: 28px;
+      width: 180px;
+      padding-left: 8px;
+      font-size: 14px;
+      color: #998f72;
+      line-height: 28px;
+      background-color: #ffefbe;
+    }
+    .telInputFocus{
+      background-color: #fff;
+    }
+    span{
+      color: #ca382b;
+      font-size: 14px;
+      padding-left: 20px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .coupon-info-tips{
+    position: absolute;
+    margin-right: 280px;
+    width: 920px;
+    bottom: 43px;
+    left: 0;
+    text-align: right;
+    color: #ca382b;
+    font-size: 14px;
+    a{
+      color: #1927ec;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .packetCt{
+    float: left;
+  }
+  .cop-list-left{
+    margin-left: 356px;
+    width: 243px;
+    color: #fff;
+    .packets-get{
+      margin-top: 54px;
+      font-size: 41px;
+      text-align: center;
+      .packets-money{
+        font-size: 50px;
+      }
+    }
+    .packets-info{
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+  .cop-list-right{
+    margin-left: 40px;
+    margin-top: 58px;
+    width:260px;
+    overflow: hidden;
+    position: relative;
+    .packets-icon{
+      position: absolute;
+      width:115px;
+      height: 115px;
+      top: 26px;
+      right:-5px;
+      z-index: 2;
+      cursor: pointer;
+    }
+    .packets-info{
+      font-size: 14px;
+      line-height: 28px;
+      color: #444444;
+    }
+    .goods-infos{
+      position: relative;
+      .goods-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    .packets-info {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .clink-rule{
+    margin-left: 230px;
+    margin-top: 15px;
+    p{
+      line-height: 27px;
+      font-size: 14px;
+      color: #444444;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .invalidLinked{
+    background-color: #64acff;
+    width: 100%;
+    height: 100%;
+    .mNolink{
+      display: block;
+    }
+    .pcNolink{
+      display: none;
+    }
+  }
+  .main{
+    display: none;
+  }
+  .Mmain{
+    display: block;
+
+    .mC-tit{
+      height: 2.65rem;
+      width: 100%;
+      background: url("/images/businesscoupon/mbg.png") 0 0 no-repeat;
+      background-position: center center;
+      background-size: 100% 2.65rem;
+    }
+    .mget-info{
+      line-height: .4rem;
+      height: .4rem;
+      margin:0 .15rem;
+      margin-top: .21rem;
+      input{
+        border: .01rem solid #bbbbbc;
+        line-height: .37rem;
+        height: .37rem;
+        width: 2.17rem;
+        margin-right: .05rem;
+        font-size: .11rem;
+        color: #888888;
+        background-color: #ffefbe;
+        text-indent: .09rem;
+        vertical-align: top;
+        display: inline-block;
+      }
+    .telInputFocus{
+      background-color: #fff;
+    }
+    }
+    .mget-inf-left{
+     padding-bottom: 0.01rem;
+      height: .4rem;
+      position: relative;
+    }
+    .mget-btn{
+      line-height: .39rem;
+      height: .39rem;
+      border-radius: 5px;
+      background-color: #fdab02;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      font-size: .12rem;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .mC-tit{
+      height: 2.65rem;
+      width: 100%;
+      background: url("/images/businesscoupon/mbg.png") 0 0 no-repeat;
+      background-position: center center;
+      background-size: 100% 2.65rem;
+    }
+    .couface{
+      .clink-tit{
+        background: url("/images/businesscoupon/mcouface.png") 0 0 no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+      .coupon-info,.cgetInfos{
+        display: none;
+      }
+    }
+    .tipscouface{
+      .clink-tit{
+        background: url("/images/businesscoupon/mcouface.png") 0 0 no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+      .coupon-info{
+        display: none;
+      }
+    }
+    .clink-geted{
+      .clink-tit{
+        background: url("/images/businesscoupon/mgeted.png") 0 0 no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+    }
+    .clink-getIt{
+      .clink-tit{
+        background: url("/images/businesscoupon/mgetIt.png") 0 0 no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+    }
+    .clink-getedAll{
+      .clink-tit{
+        background: url("/images/businesscoupon/mgetAll.png") 0 0 no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+      }
+    }
+    .clink-tit{
+      margin:0 .15rem;
+      margin-top: .18rem;
+      background-size: 100% 100%;
+      height: 1rem;
+      background: url("/images/businesscoupon/mcouface.png") 0 0 no-repeat;
+      background-position: center center;
+      margin-top: .18rem;
+      .coupon-info{
+        background-position: center center;
+
+        height: 1rem;
+      }
+      .packetCt{
+        float: left;
+      }
+      .cop-list-left {
+        text-align: center;
+        width: 35.8%;
+        color: #fff;
+      }
+      .packets-get{
+        margin-top: .22rem;
+        font-size: .29rem;
+      }
+      .packets-info{
+        font-size: .07rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: .01rem 0;
+        &:first-child{
+          margin-top: .02rem;
+        }
+      }
+      .cop-list-right{
+        width: 57.4%;
+        margin-left: .15rem;
+        color: #888888;
+        margin-top: .1rem;
+      }
+      .goods-infos{
+        position: relative;
+        width: 100%;
+        font-size: 0.08rem;
+        .goods-icon{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        img{
+          width: .45rem;
+          height: .4rem;
+        }
+      }
+    }
+    .cgetInfos{
+      color: #ca382b;
+      font-size: .1rem;
+      margin:0 .12rem;
+      text-align: right;
+      margin-top: .12rem;
+    }
+    .mIntroduce{
+      margin:0 .15rem;
+      margin-top: .25rem;
+      padding: .15rem 0;
+      color: #d38623;
+      line-height: .15rem;
+      font-size: .09rem;
+      background-color: #fbf6e7;
+      border: 1px solid #e7ceb6;
+      p{
+        padding:0.02rem 0.12rem ;
+      }
+    }
+    .cgohome{
+      padding:.15rem;
+      color: #4890e3;
+      text-decoration: underline;
+      font-size: .1rem;
+      display: block;
+      text-align: right;
+    }
+  }
+}

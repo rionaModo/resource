@@ -1,0 +1,1118 @@
+/*
+@file funclib.less
+@author 
+@date 2013-10-13
+@description 定义一些常用的less 函数
+*/
+/*
+YUI 3.13.0 (build 508226d)
+Copyright 2013 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html {
+  color: #000;
+  background: #FFF;
+}
+body {
+  height: 100%;
+  overflow: auto;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF. 
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+strong,
+em,
+i {
+  font-weight: normal;
+  font-style: normal;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+*html .clearfix {
+  height: 1%;
+}
+html,
+body {
+  font-family: '微软雅黑';
+}
+html {
+  background: #b01928;
+}
+.act-bg {
+  width: 100%;
+}
+.act-bg img {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.group:after {
+  height: 0;
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+}
+.tac {
+  text-align: center;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.lamp-board {
+  position: relative;
+}
+.lamp-board .lamp {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  background: url("/static/images/lamp.png") 0 0 no-repeat;
+}
+.lamp-board .yellow {
+  background-position: -6px 5px;
+}
+.lamp-board .yellow.on {
+  background-position: -6px -53px;
+}
+.lamp-board .blue {
+  background-position: -76px 5px;
+}
+.lamp-board .blue.on {
+  background-position: -76px -53px;
+}
+.lamp-board .green {
+  background-position: -152px 5px;
+}
+.lamp-board .green.on {
+  background-position: -152px -53px;
+}
+.lamp-board .purple {
+  background-position: -224px 5px;
+}
+.lamp-board .purple.on {
+  background-position: -224px -53px;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.lucky-activity-ctt {
+  overflow: auto;
+  position: relative;
+  clear: both;
+  width: 100%;
+}
+.lucky-activity {
+  position: relative;
+  width: 370px;
+  height: 448px;
+  margin: 0 auto;
+  background: url("/static/m/images/lucky_bg.png") 0 0 no-repeat;
+  background-size: 100% auto;
+}
+.lucky-activity .lamp-board {
+  width: 440px;
+  height: 478px;
+  position: absolute;
+  left: -40px;
+  top: -45px;
+  transform: scale(0.83);
+}
+.lucky-activity .btn {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 274px;
+  left: 110px;
+}
+.lucky-activity .rob-tag {
+  background: url("/static/m/images/rob.png") center center no-repeat;
+  background-size: 150px 194px;
+  width: 150px;
+  height: 194px;
+  position: absolute;
+  top: 71px;
+  left: 110px;
+}
+.lucky-activity .btn_rob {
+  background: url("/static/m/images/btn_rob.png") center center no-repeat;
+  background-size: 150px 50px;
+}
+.lucky-activity .btn_end {
+  background: url("/static/m/images/btn_end.png") center center no-repeat;
+  background-size: 150px 50px;
+}
+.lucky-activity .btn_out {
+  background: url("/static/m/images/btn_out.png") center center no-repeat;
+  background-size: 150px 50px;
+}
+.lucky-activity .btn_gray {
+  background: url("/static/m/images/btn_out_1.png") center center no-repeat;
+  background-size: 150px 50px;
+  color: #737373;
+  font-family: '微软雅黑';
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+}
+.lucky-activity .btn_coming {
+  background: url("/static/m/images/activity/coming_f522f92.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 276px;
+  margin-left: -64px;
+  top: 240px;
+  height: 60px;
+}
+.lucky-activity .timebar {
+  width: 317px;
+  height: 38px;
+  background: url('/static/images/luck_timebar.jpg') 0 0 no-repeat;
+  background-size: contain;
+  left: 25px;
+  bottom: 40px;
+}
+.lucky-activity .coming-soon {
+  left: 0px;
+  text-align: center;
+  width: 100%;
+}
+.coming-soon {
+  left: 187px;
+  bottom: 40px;
+  position: absolute;
+  color: #fedf82;
+  font-size: 21px;
+}
+.btn-viewrule {
+  right: 295px;
+  bottom: 302px;
+}
+.timebar {
+  position: absolute;
+}
+.timebar .time-item {
+  float: left;
+  color: #eee17a;
+  text-align: center;
+  font-size: 25px;
+  width: 18px;
+  margin-left: 8px;
+  height: 10px;
+}
+.timebar .time-group {
+  margin-top: 1px;
+}
+.timebar .hour {
+  margin-left: 92px;
+}
+.timebar .min {
+  margin-left: 22px;
+}
+.timebar .sec {
+  margin-left: 23px;
+}
+.timebar .time-group {
+  float: left;
+}
+.lottery-area {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url("/static/m/images/bg_choujiang.jpg") 0 0 no-repeat;
+  background-size: 100% auto;
+}
+.lottery-area .timebar {
+  position: relative;
+  height: 30px;
+  width: 200px;
+  margin: 0 auto;
+  background: url("/static/m/images/lottery_timebar.png") 0 0 no-repeat;
+  background-size: contain;
+}
+.lottery-area .timebar .time-item {
+  font-size: 24px;
+  width: 20px;
+  margin-left: 2px;
+}
+.lottery-area .timebar .time-group {
+  margin-top: -2px;
+}
+.lottery-area .timebar .hour {
+  margin-left: 0px;
+}
+.lottery-area .timebar .min {
+  margin-left: 23px;
+}
+.lottery-area .timebar .sec {
+  margin-left: 24px;
+}
+.lottery-area .coming-soon {
+  position: static;
+  text-align: center;
+  line-height: 1.5;
+}
+.lottery-area .coming-soon a {
+  text-decoration: none;
+}
+.lottery-area .lottery {
+  width: 380px;
+  height: 465px;
+  margin: 0 auto;
+  position: relative;
+}
+.lottery-area .lottery .bg_board {
+  background: url('/static/images/lottery_board.png') 0 0 no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.lottery-area .lottery .chance-left {
+  font-family: "宋体";
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 35px;
+  z-index: 1;
+}
+.lottery-area .lottery .chance-left strong {
+  font-size: 20px;
+  color: #fce37e;
+  margin: 0 5px;
+}
+.lottery-area .lottery .lorry-Tips {
+  color: #fff;
+  font-family: "宋体";
+  font-size: 13px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+.lottery-area .lottery .lottery-award {
+  width: 310px;
+  height: 310px;
+  background: url('/static/images/lottery_award.png') 0 0 no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 33px;
+  top: 33px;
+  z-index: 0;
+  transition-property: transform;
+}
+.lottery-area .lottery .lottery-btn {
+  width: 136px;
+  height: 140px;
+  transform: scale(0.64);
+  position: absolute;
+  z-index: 2;
+  top: 127px;
+  left: 122px;
+}
+.lottery-area .lottery .lottery-btn .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.lottery-area .lottery .lottery-btn .pointer {
+  width: 94px;
+  height: 75px;
+  position: absolute;
+  left: 50%;
+  margin-left: -47px;
+  top: -30px;
+  z-index: 0;
+}
+.lottery-area .lottery .active .face {
+  background: url('/static/images/btn_lot_active.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .active:hover .face {
+  background: url("/static/images/btn_lot_hover.png") 0 0 no-repeat;
+}
+.lottery-area .lottery .active .pointer {
+  background: url('/static/images/pointer_active.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .disable .face,
+.lottery-area .lottery .disable-canshowrule .face,
+.lottery-area .lottery .disable-nochance .face {
+  background: url('/static/images/btn_lot_disable.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .disable .pointer,
+.lottery-area .lottery .disable-canshowrule .pointer,
+.lottery-area .lottery .disable-nochance .pointer {
+  background: url('/static/images/ponter_disable.png') 0 0 no-repeat;
+}
+.lottery-area .lottery .lamp-board {
+  position: absolute;
+  left: 187px;
+  top: 187px;
+  z-index: 5;
+}
+.month {
+  background-color: #a60825;
+  padding-top: 35px;
+  margin-top: -17px;
+}
+.register {
+  position: relative;
+  background-color: #a60825;
+  padding-top: 15px;
+  margin-top: -17px;
+}
+.register .btn-rule {
+  float: inherit!important;
+}
+.btn-rule {
+  display: inline-block;
+  width: 117px;
+  height: 37px;
+  background: url("/static/m/images/btn_rule.png") left top no-repeat;
+  background-size: 100% 100%;
+  font-family: "微软雅黑";
+  line-height: 37px;
+  color: #b41c1d;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none!important ;
+}
+.btn-rule:last-child {
+  float: right;
+}
+.btn-rob {
+  margin: 0 auto;
+  width: 330px;
+  margin-bottom: 15px ;
+  margin-top: 30px ;
+  text-align: left;
+}
+.btn-rob.fisrt-ch {
+  margin-top: 0px ;
+}
+.last_rob {
+  margin-top: -60px;
+}
+.btn-rob:nth-child(2n) .btn-rule:last-child,
+.btn-rob:nth-child(n) .btn-rule:last-child {
+  margin-right: 15px;
+}
+.btn-rob:nth-child(2n) .btn-rule:first-child,
+.btn-rob:nth-child(n) .btn-rule:first-child {
+  margin-left: 15px;
+}
+.fisrt-ch.btn-rob .btn-rule {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+.caidai {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 17px;
+  background: url("/static/m/images/caidai.png") 0 0 repeat-x;
+}
+.shadowMask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.shadowMask .wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.rule-panel {
+  box-sizing: border-box;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.rule-panel .layer-content {
+  padding: 10px;
+  position: relative;
+}
+.rule-panel .layer-content .layer-cls-btn {
+  display: none;
+  z-index: 5;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 45px;
+  right: 41px;
+  background: url("/static/m/images/close-btn.png") center center no-repeat;
+  background-size: 22px 22px;
+}
+.rule-panel .bg-t {
+  height: 18px;
+  background: url("/static/m/images/scroll_bg_t.png") center center no-repeat;
+  background-size: 100% 18px;
+  width: 100%;
+}
+.rule-panel .bg-b {
+  height: 18px;
+  background: url("/static/m/images/scroll_bg_b.png") center center no-repeat;
+  background-size: 100% 18px;
+  width: 100%;
+}
+.rule-panel .bg-m {
+  background-image: url("/static/m/images/scroll_bg_m.png");
+  background-position: top center ;
+  background-repeat: repeat-y;
+  background-size: 100% 1px;
+  width: 100%;
+  overflow: scroll;
+}
+.rule-panel .content.mouth-nodecre dd {
+  padding-left: 5px;
+}
+.rule-panel .content.mouth-nodecre dt {
+  padding: 5px 0;
+}
+.rule-panel .content.mouth-nodecre .rule-tip {
+  display: none;
+}
+.rule-panel .content.mouth-nodecre .rules {
+  padding: 10px 12px;
+  margin-top: 20px;
+}
+.rule-panel .content.content-nodecre .list-table {
+  margin: 3px 0;
+}
+.rule-panel .content.content-nodecre .rules {
+  padding: 0 3px;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 279px;
+}
+.rule-panel .content.content-nodecre .rule-tip {
+  display: none;
+}
+.rule-panel .content.content-nodecre .row {
+  overflow: auto;
+}
+.rule-panel .content.content-nodecre .row.head {
+  background-color: #fdf4dd;
+}
+.rule-panel .content.content-nodecre .row.head .col {
+  height: 36px;
+  line-height: 36px;
+}
+.rule-panel .content.content-nodecre .col {
+  width: 33%;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.rule-panel .content.content-nodecre .list-wrap {
+  height: 180px;
+  overflow: hidden;
+}
+.rule-panel .content.content-nodecre .list-wrap .row.even {
+  background-color: #fdf4dd;
+}
+.rule-panel .content.content-nodecre .list-wrap .row {
+  height: 30px;
+  background-color: #fff;
+}
+.rule-panel .content {
+  position: relative;
+}
+.rule-panel .content .rule-tip {
+  color: #560303;
+  line-height: 33px;
+  font-size: 16px;
+  width: 122px;
+  height: 33px;
+  text-indent: 22px;
+  font-family: "宋体";
+  background: url("/static/m/images/rule_tip.png") left center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 15px;
+  top: 39px;
+}
+.rule-panel .content .title {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 24px;
+  color: #a70404;
+}
+.rule-panel .content .rules {
+  margin: 0 auto;
+  font-family: "宋体";
+  margin-top: 33px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #560303;
+  padding: 0 15px;
+  background: url("/static/m/images/bor-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  padding-top: 36px;
+  overflow-y: auto;
+  width: 255px;
+}
+.rule-panel .content .rules::-webkit-scrollbar-thumb {
+  background: #8d011a ;
+  border-radius: 4px;
+}
+.rule-panel .content .rules::-webkit-scrollbar {
+  width: 6px;
+}
+.rule-panel .content .rules::-webkit-scrollbar-track {
+  background: #cccbcb;
+  border-radius: 4px;
+}
+.rule-panel .content .rules {
+  scrollbar-track-color: #cccbcb;
+}
+.rule-panel .content .close {
+  border-radius: 10px;
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  background-color: #8d011a;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -80px;
+}
+.rules::-webkit-scrollbar-thumb {
+  background: #FFA711;
+  border-radius: 4px;
+}
+/**
+ * 移动端大小需要调整下
+ */
+.couponshow {
+  margin-top: 20%;
+}
+.couponshow .wrap {
+  width: 307.5px;
+}
+.couponshow .wrap .btn_ok {
+  display: block;
+  width: 119.16666667px;
+  height: 31.66666667px;
+  background: url("/static/images/btn_ok.png") 0 0 no-repeat;
+  margin-top: 12.5px;
+  margin-left: 90px;
+  background-size: cover;
+}
+.couponshow .coupon {
+  position: relative;
+  width: 307.5px;
+  height: 321.66666667px;
+  background: url("/static/m/images/coupon_amout.png") 0 0 no-repeat;
+  background-size: cover;
+}
+.couponshow .coupon .amount {
+  color: #fff;
+  font-size: 32.5px;
+  position: absolute;
+  left: 73.33333333px;
+  top: 240.83333333px;
+  width: 152.5px;
+  text-align: center;
+  font-weight: bold;
+}
+.popup {
+  width: 285px;
+  height: 281px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -142.5px;
+  top: 50%;
+  margin-top: -140.5px;
+  background: url("/static/images/popup_bg.png") 0 0 no-repeat;
+}
+.popup .close {
+  float: left;
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin-left: 68px;
+  margin-top: 214px;
+}
+.popup .text {
+  font-size: 20px;
+  color: #ba1533;
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 380px) {
+  .lucky-activity {
+    transform: scale(0.9);
+    margin-top: -20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .btn-rob {
+    transform: scale(0.8);
+  }
+  .btn-rob.fisrt-ch {
+    transform: scale(0.8);
+    margin-top: -25px;
+  }
+  .lottery-area .lottery + .rob-mrg.btn-rob {
+    margin-top: -25px;
+  }
+  .layer-noprize {
+    transform: scale(0.8);
+  }
+  .lucky-activity {
+    transform: scale(0.8);
+    margin-left: -25px;
+  }
+  .lucky-activity + .tac {
+    margin-top: -30px;
+  }
+  .lottery-area .lottery {
+    margin-top: -30px;
+    margin-left: -30px;
+    transform: scale(0.8);
+  }
+  .lottery-area .lottery + .tac {
+    margin-top: -50px;
+  }
+  .rule-panel .content-nodecre.content .rules {
+    width: 230px;
+  }
+  .rule-panel .content .rules {
+    width: 210px;
+  }
+}
+.lorry-money {
+  font-family: "微软雅黑";
+  font-size: 15px;
+  color: #fcdf58;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+.layer-noprize {
+  background: url("/static/m/images/activity/sorry.png") center center no-repeat;
+  background-size: 329px 282px;
+  width: 329px;
+  height: 282px;
+  margin: 0 auto;
+  margin-top: -141px;
+  margin-left: -165px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+}
+.layer-noprize .close {
+  display: block;
+  position: absolute;
+  width: 226px;
+  height: 47px;
+  line-height: 47px;
+  background: url("/static/m/images/activity/close_btn.png") center center no-repeat;
+  background-size: 226px 47px;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -113px;
+  text-align: center;
+  color: #874007;
+  font-family: '微软雅黑';
+  font-size: 18px;
+}
+.layer-noprize .layer-tips {
+  bottom: 74px;
+  font-family: '微软雅黑';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: #444444;
+  font-size: 12px;
+}
+.layer-noprize.noChance,
+.layer-noprize.luckNoChance {
+  background: url("/static/m/images/activity/noChance.png") center center no-repeat;
+  background-size: 329px 282px;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "微软雅黑";
+  color: #444444;
+}
+.layer-noprize.noChance .layer-tips,
+.layer-noprize.luckNoChance .layer-tips {
+  bottom: 67px;
+}
+.layer-noprize.luckNoChance .layer-tips {
+  bottom: 74px;
+}
+.layer-noprize.luck_money {
+  background: url("/static/m/images/activity/time.png") center center no-repeat;
+  background-size: 329px 282px;
+}
+.layer-noprize.luck_money .layer-tips {
+  bottom: 37px;
+  line-height: 17px;
+}
+.layer-noprize.luck_money .layer-tips .rob_my_time {
+  font-family: "微软雅黑";
+  color: #a70403;
+  font-size: 12px;
+}
+.layer-noprize.luck_money .layer-tips .rob_my_tip {
+  font-family: "微软雅黑";
+  color: #444444;
+  font-size: 12px;
+}
+.layer-noprize.luck_money .layer-tips .rob_my_tip span {
+  color: #a70403;
+}
+.layer-noprize.luck_money .layer-tips .rob_my_minutes {
+  position: absolute;
+  width: 100%;
+  top: -110px;
+  left: 0;
+  color: #101010;
+  font-size: 32px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding-left: 2px;
+}
+.layer-noprize.more_one .layer-tips {
+  bottom: 66px;
+}
+.layer-noprize.rob_all {
+  background: url("/static/m/images/activity/rob_all.png") center center no-repeat;
+  background-size: 329px 282px;
+}
+.layer-noprize.rob_all p {
+  font-family: "微软雅黑";
+  color: #444444;
+  font-size: 12px;
+}
+.layer-noprize.rob_money {
+  background: url("/static/m/images/activity/rob_mn.png") center center no-repeat;
+  background-size: 329px 282px;
+}
+.layer-noprize.rob_money .rob_my_tip {
+  font-family: "微软雅黑";
+  margin-bottom: 4px;
+  color: #a70403;
+  font-size: 12px;
+}
+.layer-noprize.rob_money .rob_my_tip span {
+  font-size: 16px;
+}
+.layer-noprize.rob_money .rob_my_time {
+  font-family: "微软雅黑";
+  color: #444444;
+  font-size: 12px;
+}
+.layer-noprize.rob_money .money_show {
+  position: absolute;
+  width: 100%;
+  bottom: 145px;
+  text-align: center;
+  color: #fefefe;
+  font-size: 22px;
+  font-family: "宋体";
+  font-weight: bold;
+}
+.layer-noprize.additional_cop {
+  background: url("/static/m/images/activity/additional_cop_f2a7d19.png") center center no-repeat;
+  background-size: 329px 282px;
+}
+.layer-noprize.additional_cop .layer-tips {
+  height: 148px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content {
+  height: 90px;
+  margin-bottom: 20px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_left {
+  color: #fff;
+  width: 95px;
+  margin-left: 25px;
+  float: left;
+  text-align: center;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_left .additional_title {
+  margin-top: 12px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_left .money-line {
+  font-size: 25px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_left .money-line span {
+  font-size: 19px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_left .additional_ad {
+  font-size: 9px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_right {
+  text-align: left;
+  width: 170px;
+  padding: 5px;
+  float: left;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_right .additional-title {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: #888888;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_right .additional_shop {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #444;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.layer-noprize.additional_cop .layer-tips .additional_content .additional_cop_right .additional_list {
+  font-size: 12px;
+  color: #888888;
+}
+.layer-noprize.additional_cop .rob_my_tip {
+  font-family: "微软雅黑";
+  margin-bottom: 4px;
+  color: #a70403;
+  font-size: 12px;
+}
+.layer-noprize.additional_cop .rob_my_tip span {
+  font-size: 16px;
+}
+.layer-noprize.additional_packet {
+  background: url("/static/m/images/activity/additional_packet_919cc95.png") center center no-repeat;
+  background-size: 329px 282px;
+}
+.layer-noprize.additional_packet .layer-tips {
+  height: 148px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content {
+  height: 90px;
+  margin-bottom: 20px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_left {
+  color: #fff;
+  width: 95px;
+  margin-left: 25px;
+  float: left;
+  text-align: center;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_left .additional_title {
+  margin-top: 12px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_left .money-line {
+  font-size: 25px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_left .money-line span {
+  font-size: 19px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_left .additional_ad {
+  font-size: 9px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_right {
+  text-align: left;
+  width: 170px;
+  padding: 5px;
+  float: left;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_right .additional-title {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: #888888;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_right .additional_shop {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #444;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.layer-noprize.additional_packet .layer-tips .additional_content .additional_cop_right .additional_list {
+  font-size: 12px;
+  color: #888888;
+}
+.layer-noprize.additional_packet .rob_my_tip {
+  font-family: "微软雅黑";
+  margin-bottom: 4px;
+  color: #a70403;
+  font-size: 12px;
+}
+.layer-noprize.additional_packet .rob_my_tip span {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}

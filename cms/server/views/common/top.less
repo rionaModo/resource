@@ -1,0 +1,61 @@
+
+.top {
+  @top-height: 43px;
+  @bgc: #525151;
+  height: @top-height;
+  line-height: @top-height;
+  background-color: @bgc;
+  color: #c1c0c0;
+
+  .nav {
+    float: left;
+    margin-left: 25px;
+
+    a {
+      display: block;
+      min-width: 50px;
+      padding: 0 13px;
+      float: left;
+      text-align: center;
+      color: #c1c0c0;
+
+      &:hover {
+        text-decoration: none;
+        background-color: darken(@bgc, 10%);
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #353535;
+      }
+    }
+  }
+
+  .app-nav {
+    float: left;
+    display: block;
+    padding: 0 10px;
+    color: #c1c0c0;
+    .icon {
+      vertical-align: middle;
+      display: inline-block;
+      width: 17px;
+      height: 20px;
+      margin-right: 5px;
+      background: url('./images/icon_phone.png') 0 0 no-repeat;
+
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: darken(@bgc, 5%);
+      text-decoration: none;
+      
+    }
+  }
+  .user-nav {
+    float: left;
+    margin-left: 30px;
+
+  }
+}

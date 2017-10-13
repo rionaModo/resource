@@ -1,0 +1,357 @@
+//品牌样式st
+.new_search_box {
+  border: 1px solid #CCC;
+  overflow: hidden;
+  padding: 12px;
+  .sl-key {
+    color: #333;
+    float: left;
+    overflow: hidden;
+    padding-left: 10px;
+    white-space: nowrap;
+    width: 70px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+.dl-cat-list {
+  float: left;
+  padding-left: 10px;
+  width: 920px;
+  li {
+    margin-right: 10px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    display: inline-block;
+    float: left;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #19759b;
+    font-size: 14px;
+    text-decoration: none;
+    a {
+      &:hover{
+        color: #bd1609;
+      }
+    }
+  }
+}
+.clear_check_cat {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  width: 40px;
+  font-size: 12px;
+  float: left;
+  cursor: pointer;
+  &:hover {
+    color: #BD1509;
+  }
+}
+.clear_check_cat2 {
+  background-color: #F6F6F6;
+  color: #000;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  width: 40px;
+  float: left;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 12px;
+  &:hover {
+    color: #BD1509;
+  }
+}
+//单选选
+.search_brand_off {
+  /* display: none; */
+  border: 2px solid #BD1609;
+  .brand_buttonShow_div{
+    display: none;
+  }
+  .sl-all {
+    float: left;
+    margin-right: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 39px;
+    height: 25px;
+    background: url("/images/businesscoupon/search_all_text.jpg") 0 0 repeat-x;
+  }
+  .letter-list {
+    float: left;
+    font-size: 14px;
+    li.on {
+      background-color: #bd1509;
+      a {
+        color: #fff;
+      }
+    }
+    li {
+      display: inline-block;
+      float: left;
+      border: 1px solid #ccc;
+      margin-right: 2px;
+      width: 15px;
+      cursor: pointer;
+      text-align: center;
+      &:hover{
+        border: 1px solid #bd1509;
+      }
+      a{
+        font-size: 12px;
+        color: #19759B;
+
+      }
+    }
+  }
+  .search-condition {
+    float: left;
+    margin-right: 10px;
+    margin-left: 166px;
+    a {
+      color: #19759B;
+      font-size: 12px;
+    }
+    input {
+      width: 100px;
+      height: 22px;
+      border: solid 1px #ccc;
+      line-height: 22px;
+    }
+  }
+  .cl{
+    clear: both;
+  }
+  .brand_list {
+    padding: 0 0 0 80px;
+    height: 143px;
+    overflow: auto;
+    li {
+      padding: 5px 4px;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 108px;
+      float: left;
+      color: #19759B;
+      &:hover{
+        color: #bd1509;
+        i{
+          background: url("/images/businesscoupon/checkbox01.png") no-repeat;
+        }
+      }
+      i {
+        width: 13px;
+        height: 13px;
+        overflow: hidden;
+        display: inline-block;
+        background: url("/images/businesscoupon/checkbox02.png") no-repeat ;
+        display: none;
+      }
+    }
+  }
+  li.sl-check{
+    float: left;
+    i {
+      width: 13px;
+      height: 13px;
+      overflow: hidden;
+      display: inline-block;
+      background: url("/images/businesscoupon/new_search_icon.png") no-repeat 0 -87px !important;
+    }
+  }
+  .selected-brand {
+    display: none;
+    margin: 15px 0 10px 80px;
+    font-size: 14px;
+    color: #333;
+    height: 20px;
+    cursor: pointer;
+    ul{
+      float: left;
+    }
+    .sl-check{
+      margin-right: 15px;
+      color: #19759B;
+      display: inline-block;
+    }
+  }
+  .check-key {
+    float: left;
+  }
+}
+//多选
+.more_select_list.search_brand_off{
+display: none;
+  border: 2px solid #ebba64;
+  .brand_buttonShow_div{
+    display: block;
+  }
+  .clear_check_cat,.clear_check_cat2{
+    display: none;
+  }
+  .brand_list{
+    li{
+      &:hover{
+        a{
+          color: #bd1509;
+        }
+        i{
+          background: url("/images/businesscoupon/checkbox01.png") no-repeat;
+        }
+      }
+    }
+    i {
+      background: url("/images/businesscoupon/checkbox02.png") no-repeat ;
+      display: inline-block;
+    }
+    li.sl-check{
+      i {
+        background: url("/images/businesscoupon/new_search_icon.png") no-repeat 0 -87px !important;
+      }
+    }
+  }
+  .brand_buttonShow_div{
+    text-align: center;
+  }
+  .check-button {
+    color: #ccc;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    width: 50px;
+    margin: 15px 8px 5px 0;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .selected-check-button {
+    background-color: #bd1509;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #bd1509;
+    padding: 2px 4px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+    color: #fff;
+    margin: 15px 5px 5px 0px;
+  }
+  .clear-button {
+    background-color: #F6F6F6;
+    color: #000;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 15px 5px 5px 0;
+    font-size: 12px;
+  }
+}
+// 已选条件
+.clear_check_big_box{
+  margin-left: 70px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.clear_check_box {
+  float: left;
+  width: 730px;
+  ul.clear_check_state {
+    li{
+      float: left;
+      font-size: 14px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      padding: 0px 30px 0px 6px;
+      color: #434343;
+      cursor: pointer;
+      height: 21px;
+      margin-bottom: 10px;
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+      background-color: #fff;
+      &:hover {
+        border: 1px solid #BD1609;
+        i.on {
+          background-position: right 0;
+          display: inline-block;
+          width: 27px;
+          height: 25px;
+          vertical-align: middle;
+        }
+      }
+      i.on {
+        background-position: right -29px;
+        display: inline-table;
+        width: 27px;
+        height: 25px;
+        vertical-align: middle;
+        margin-left: 10px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(/images/businesscoupon/new_search_icon.png);
+      }
+    }
+  }
+}
+.clear_check {
+  background-color: #F6F6F6;
+  color: #000;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  width: 80px;
+  float: right;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif, "宋体";
+  &:hover {
+    color: #BD1509;
+  }
+}
+//品牌样式end
+
+
+//联想st
+ .associateCtent{
+   z-index: 5;
+   position: absolute;
+   top: 30px;
+   border-top: 0;
+   background-color: #fff;
+   width: 100%;
+   left: 0;
+   .associateUl{
+     border: 1px solid #a9a9a9;
+     li{
+       height: 24px;
+       line-height: 24px;
+       color: #343334;
+       font-size: 13px;
+       overflow: hidden;
+       white-space: pre-wrap;
+       cursor: pointer;
+       &:hover{
+         text-decoration: underline;
+       }
+     }
+   }
+ }
+//联想end

@@ -1,0 +1,1030 @@
+@import "/funclib.less";
+@import "/common/inc/reset.less";
+
+html {
+  background: #b01928;
+}
+.act-bg {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.group:after {
+    height: 0;
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+}
+.tac {
+  text-align: center;
+}
+.mt20 {
+  margin-top: 20px;
+}
+
+.lamp-board {
+  position: relative;
+
+  .lamp {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    background: url("/images/lamp.png") 0 0 no-repeat;
+  }
+  @offset-x: -34px - (-6px); //此次切图为 28px 29px 的偏移
+  @offset-y: -82px - (-53px); 
+
+  .yellow {
+    background-position: -(34px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(34px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .blue {
+    background-position: -(104px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(104px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .green {
+    background-position: -(180px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(180px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+  .purple {
+    background-position: -(252px + @offset-x) -(24px + @offset-y);
+    &.on {
+      background-position: -(252px + @offset-x) -(82px + @offset-y);
+    }
+  }
+
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.lucky-activity-ctt{
+  overflow: auto;
+  position: relative;
+  clear: both;
+  width:100%;
+}
+.lucky-activity {
+  position: relative;
+  width: 370px;
+  height: 448px;
+  margin: 0 auto;
+  background: url("./images/lucky_bg.png") 0 0 no-repeat;
+  background-size: 100% auto;
+  .lamp-board {
+    width: 440px;
+    height: 478px;
+    position: absolute;
+    left: -40px;
+    top: -45px;
+    transform: scale(0.83);
+  }
+  .btn {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 274px;
+    left: 110px;
+  }
+  .rob-tag{
+    background: url("./images/rob.png") center center no-repeat;
+    background-size: 150px 194px;
+    width: 150px;
+    height: 194px;
+    position: absolute;
+    top: 71px;
+    left: 110px;
+  }
+  .btn_rob {
+    background: url("./images/btn_rob.png") center center no-repeat;
+    background-size: 150px 50px;
+  }
+  .btn_end {
+    background: url("./images/btn_end.png") center center no-repeat;
+    background-size: 150px 50px;
+  }
+  .btn_out {
+    background: url("./images/btn_out.png") center center no-repeat;
+    background-size: 150px 50px;
+  }
+  .btn_gray{
+    background: url("./images/btn_out_1.png") center center no-repeat;
+    background-size: 150px 50px;
+    color: #737373;
+    font-family: '微软雅黑';
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .btn_coming{
+    background: url("./images/activity/coming.png") center center no-repeat;
+    background-size: 100% 100%;
+    width: 276px;
+    margin-left: -64px;
+    top: 240px;
+    height:60px;
+  }
+  .btn-rule {
+
+  }
+
+  .timebar {
+    width: 317px;
+    height: 38px;
+    background: url('/images/luck_timebar.jpg') 0 0 no-repeat;
+    background-size: contain;
+    left: 25px;
+    bottom: 40px;
+
+  }
+  .coming-soon {
+    left: 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+.coming-soon {
+  left: 187px;
+  bottom: 40px;
+  position: absolute;
+  color: #fedf82;
+  font-size: 21px;
+}
+
+.btn-viewrule {
+  right: 295px;
+  bottom: 302px;
+}
+
+.timebar {
+  position: absolute;
+  .time-item {
+    float: left;
+    color: #eee17a;
+    text-align: center;
+
+    font-size: 25px;
+    width: 18px;
+    margin-left: 8px;
+    height: 10px;
+  }
+  .time-group {
+    margin-top: 1px;
+  }
+  .hour {
+    margin-left: 92px;
+  }
+  .min {
+    margin-left: 22px;
+  }
+  .sec {
+    margin-left: 23px;
+  }
+
+  .time-group {
+    float: left;
+  }
+}
+
+
+// 抽奖活动
+.lottery-area {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url("./images/bg_choujiang.jpg") 0 0 no-repeat;
+  background-size: 100% auto;
+
+  .timebar {
+    position: relative;
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    background: url("./images/lottery_timebar.png") 0 0 no-repeat;
+    background-size: contain;
+    .time-item {
+      font-size: 24px;
+      width: 20px;
+      margin-left: 2px;
+    }
+    .time-group {
+      margin-top: -2px;
+    }
+    .hour {
+      margin-left: 0px;
+    }
+    .min {
+      margin-left: 23px;
+    }
+    .sec {
+      margin-left: 24px;
+    }
+  }
+  .coming-soon {
+    position: static;
+    text-align: center;
+    line-height: 1.5;
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  .lottery {
+    width: 380px;
+    height: 465px;
+    margin: 0 auto;
+    position: relative;
+
+    .bg_board {
+      background: url('/images/lottery_board.png') 0 0 no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chance-left {
+      font-family: "宋体";
+      font-size: 15px;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 35px;
+      z-index: 1;
+      strong {
+        font-size: 20px;
+        color: #fce37e;
+        margin: 0 5px;
+      }
+    }
+    .lorry-Tips{
+      color: #fff;
+      font-family: "宋体";
+      font-size: 13px;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+    .lottery-award {
+      width: 310px;
+      height: 310px;
+      background: url('/images/lottery_award.png') 0 0 no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 33px;
+      top: 33px;
+      z-index: 0;
+      transition-property: transform;
+    }
+
+    .lottery-btn {
+      width: 136px;
+      height: 140px;
+      transform: scale(0.64);
+
+      position: absolute;
+      z-index: 2;
+      top: 127px;
+      left: 122px;
+            
+      .face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+      }
+      .pointer {
+        width: 94px;
+        height: 75px;
+        position: absolute;
+        .abmid_hr(94px);
+        top: -30px;
+        z-index: 0;
+      }
+    }
+    .active {
+      .face {
+        background: url('/images/btn_lot_active.png') 0 0 no-repeat;
+      }
+      &:hover {
+        .face {
+          background: url("/images/btn_lot_hover.png") 0 0 no-repeat;
+        }
+      }
+      .pointer {
+        background: url('/images/pointer_active.png') 0 0 no-repeat;
+      }
+    }
+    .disable,
+    .disable-canshowrule,
+    .disable-nochance {
+      .face {
+        background: url('/images/btn_lot_disable.png') 0 0 no-repeat;
+      }
+      .pointer {
+        background: url('/images/ponter_disable.png') 0 0 no-repeat;
+      }
+    }
+
+
+    .lamp-board {
+      position: absolute;
+      left: 187px;
+      top: 187px;
+      z-index: 5;
+    }
+  }
+}
+
+
+.month {
+  background-color: #a60825;
+  padding-top: 35px;
+  margin-top: -17px;
+}
+.register {
+  position: relative;
+  background-color: #a60825;
+  padding-top: 15px;
+  margin-top: -17px;
+  .btn-rule {
+    float: inherit!important;
+  }
+}
+
+.btn-rule {
+  display: inline-block;  
+  width: 117px;
+  height: 37px;
+  background: url("./images/btn_rule.png") left top no-repeat;
+  background-size: 100% 100%;
+  font-family: "微软雅黑";
+  line-height: 37px;
+  color: #b41c1d;
+  font-size: 16px;
+  text-align: center;
+  text-decoration:none!important ;
+}
+.btn-rule:last-child{
+ float: right;
+}
+.btn-rob{
+  margin: 0 auto;
+  width: 330px;
+  margin-bottom:15px ;
+  margin-top:30px ;
+  text-align: left;
+}
+.btn-rob.fisrt-ch{
+  margin-top:0px ;
+}
+.last_rob{
+  margin-top:-60px ;
+}
+.btn-rob:nth-child(2n) .btn-rule:last-child  ,.btn-rob:nth-child(n) .btn-rule:last-child{
+ margin-right: 15px;
+}
+.btn-rob:nth-child(2n) .btn-rule:first-child  ,.btn-rob:nth-child(n) .btn-rule:first-child{
+  margin-left: 15px;
+}
+.fisrt-ch.btn-rob .btn-rule {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+
+
+
+
+.caidai {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 17px;
+  background: url("./images/caidai.png") 0 0 repeat-x;
+}
+
+.shadowMask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+  .wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.rule-panel {
+  box-sizing: border-box;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  .layer-content{
+   padding: 10px;
+    position: relative;
+    .layer-cls-btn{
+      display: none;
+      z-index: 5;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 45px;
+      right: 41px;
+      background: url("./images/close-btn.png") center center no-repeat;
+      background-size: 22px 22px;
+    }
+  }
+  .bg-t {
+    height: 18px;
+    background: url("./images/scroll_bg_t.png") center center no-repeat;
+    background-size: 100% 18px;
+    width: 100%;
+  }
+  .bg-b {
+    height: 18px;
+    background: url("./images/scroll_bg_b.png") center center no-repeat;
+    background-size: 100% 18px;
+    width: 100%;
+  }
+  .bg-m {
+    background-image: url("./images/scroll_bg_m.png") ;
+    background-position:top center ;
+    background-repeat: repeat-y;
+    background-size:100% 1px;
+    width: 100%;
+    overflow: scroll;
+  }
+  .content.mouth-nodecre{
+    dd{
+      padding-left: 5px;
+    }
+    dt{
+      padding: 5px 0;
+    }
+    .rule-tip{
+      display: none;
+    }
+    .rules{
+      padding: 10px 12px;
+      margin-top: 20px;
+    }
+  }
+  .content.content-nodecre{
+    .list-table{
+      margin:3px 0;
+    }
+    .rules{
+      padding: 0 3px;
+      overflow: hidden;
+      margin-top: 20px;
+      width: 279px;
+    }
+    .rule-tip{
+      display: none;
+    }
+    .row{
+      overflow: auto;
+    }
+    .row.head{
+      background-color: #fdf4dd;
+      .col{
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+    .col{
+      width: 33%;
+      float: left;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .list-wrap{
+      height: 180px;
+      overflow: hidden;
+      .row.even{
+        background-color: #fdf4dd;
+      }
+      .row{
+        height: 30px;
+        background-color: #fff;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    .rule-tip {
+      color: #560303;
+      line-height: 33px;
+      font-size: 16px;
+      width: 122px;
+      height: 33px;
+      text-indent: 22px;
+      font-family: "宋体";
+      background: url("./images/rule_tip.png") left center no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      left: 15px;
+      top: 39px;
+    }
+    .title {
+      text-align: center;
+      font-size: 22px;
+      margin-top: 24px;
+      color: #a70404;
+    }
+    .rules {
+      margin: 0 auto;
+      font-family: "宋体";
+      margin-top: 33px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #560303;
+      //margin-left: 30px;
+      padding: 0 15px;
+      background: url("./images/bor-bg.png") center center no-repeat;
+      background-size: 100% 100%;
+      padding-top: 36px;
+      //max-height: 63%;
+      overflow-y: auto;
+      width: 255px;
+    }
+    .rules::-webkit-scrollbar-thumb{
+      background:#8d011a ;
+      border-radius:4px;
+    }
+    .rules::-webkit-scrollbar {
+      width: 6px;
+    }
+    .rules::-webkit-scrollbar-track{
+      background:#cccbcb;
+      border-radius:4px;
+    }
+   .rules{
+     scrollbar-track-color:#cccbcb;
+   }
+    .close {
+      border-radius: 10px;
+      width: 160px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 14px;
+      background-color: #8d011a;
+      color: #fff;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      text-align: center;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -80px;
+    }
+  }
+}
+.rules::-webkit-scrollbar-thumb{
+  background:#FFA711;
+  border-radius:4px;
+}
+/**
+ * 移动端大小需要调整下
+ */
+.couponshow {
+  @rato: 1.2;
+  margin-top: 20%;
+  .wrap {
+    width: 369px / @rato;
+    .btn_ok {
+      display: block;
+      width: 143px / @rato;
+      height: 38px / @rato;
+      background: url("/images/btn_ok.png") 0 0 no-repeat;
+      margin-top: 15px / @rato;
+      margin-left: 108px / @rato;
+      background-size: cover;
+    }
+  }
+  .coupon {
+    position: relative;
+    width: 369px / @rato;
+    height: 386px / @rato;
+    background: url("./images/coupon_amout.png") 0 0 no-repeat;
+    background-size: cover;
+    .amount {
+      color: #fff;
+      font-size: 39px / @rato;
+      position: absolute;
+      left: 88px / @rato;
+      top: 289px / @rato;
+      width: 183px / @rato;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+.popup {
+  width: 285px;
+  height: 281px;
+  overflow: hidden;
+  position: absolute;
+  .abmid(285px, 281px);
+  background: url("/images/popup_bg.png") 0 0 no-repeat;
+  .close {
+    float: left;
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin-left: 68px;
+    margin-top: 214px;
+  }
+  .text {
+    font-size: 20px;
+    color: #ba1533;
+    position: absolute;
+    left: 0;
+    top: 160px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 420px) {
+
+}
+
+
+@media screen and (max-width: 380px) {
+  .lucky-activity {
+    transform: scale(0.9);
+    margin-top: -20px
+  }
+
+}
+@media screen and (max-width: 320px) {
+  .btn-rob{
+    transform: scale(0.8);
+  }
+    .btn-rob.fisrt-ch {
+      transform: scale(0.8);
+      margin-top: -25px;
+    }
+  .lottery-area{
+    .lottery + .rob-mrg.btn-rob {
+      margin-top: -25px;
+    }
+  }
+
+  .layer-noprize{
+    transform: scale(0.8);
+  }
+  .lucky-activity {
+    transform: scale(0.8);
+    margin-left: -25px;
+  }
+  .lucky-activity +.tac {
+    margin-top: -30px;
+  }
+  .lottery-area {
+    .lottery {
+      margin-top: -30px;
+      margin-left: -30px;
+      transform: scale(0.8);
+    }
+    .lottery +.tac {
+      margin-top: -50px;
+    }
+  }
+  .rule-panel{
+    .content-nodecre.content{
+      .rules{
+        width: 230px;
+      }
+    }
+    .content{
+      .rules{
+        width: 210px;
+      }
+    }
+  }
+}
+.lorry-money{
+  font-family: "微软雅黑";
+  font-size: 15px;
+  color: #fcdf58;
+  text-align: center;
+  font-style:italic;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+//抢红包弹窗
+.layer-noprize {
+  background: url("./images/activity/sorry.png") center center no-repeat;
+  background-size: 329px 282px;
+  width: 329px;
+  height: 282px;
+  margin: 0 auto;
+  margin-top: -141px;
+  margin-left: -165px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  .close {
+    display: block;
+    position: absolute;
+    width: 226px;
+    height: 47px;
+    line-height: 47px;
+    background: url("./images/activity/close_btn.png") center center no-repeat;
+    background-size: 226px 47px;
+    bottom:16px;
+    left:50%;
+    margin-left:-113px ;
+    text-align: center;
+    color: #874007;
+    font-family: '微软雅黑';
+    font-size: 18px;
+  }
+  .layer-tips{
+    bottom: 74px;
+    font-family: '微软雅黑';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: #444444;
+    font-size: 12px;
+  }
+}
+.layer-noprize.noChance,.layer-noprize.luckNoChance{
+  background: url("./images/activity/noChance.png") center center no-repeat;
+  background-size: 329px 282px;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "微软雅黑";
+  color: #444444;
+  .layer-tips{
+    bottom: 67px;
+  }
+}
+.layer-noprize.luckNoChance{
+  .layer-tips{
+    bottom: 74px;
+  }
+}
+.layer-noprize.luck_money{
+  background: url("./images/activity/time.png") center center no-repeat;
+  background-size: 329px 282px;
+  .layer-tips{
+    bottom: 37px;
+    line-height: 17px;
+    .rob_my_time{
+      font-family: "微软雅黑";
+      color: #a70403;
+      font-size: 12px;
+    }
+    .rob_my_tip{
+      font-family: "微软雅黑";
+      color: #444444;
+      font-size: 12px;
+      span{
+        color: #a70403;
+      }
+    }
+    .rob_my_minutes{
+      position: absolute;
+      width: 100%;
+      top: -110px;
+      left: 0;
+      color: #101010;
+      font-size: 32px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      padding-left: 2px;
+    }
+  }
+}
+.layer-noprize.more_one{
+  .layer-tips{
+    bottom: 66px;
+  }
+}
+.layer-noprize.rob_all{
+  background: url("./images/activity/rob_all.png") center center no-repeat;
+  background-size: 329px 282px;
+  p{
+    font-family: "微软雅黑";
+    color: #444444;
+    font-size: 12px;
+  }
+}
+.layer-noprize.rob_money{
+  background: url("./images/activity/rob_mn.png") center center no-repeat;
+  background-size: 329px 282px;
+  .rob_my_tip{
+    font-family: "微软雅黑";
+    margin-bottom: 4px;
+    color: #a70403;
+    font-size: 12px;
+    span{
+      font-size: 16px;
+    }
+  }
+  .rob_my_time{
+    font-family: "微软雅黑";
+    color: #444444;
+    font-size: 12px;
+  }
+  .money_show{
+    position: absolute;
+    width: 100%;
+    bottom: 145px;
+    text-align: center;
+    color: #fefefe;
+    font-size: 22px;
+    font-family: "宋体";
+    font-weight: bold;
+  }
+}
+//additional_award st
+.layer-noprize.additional_cop{
+  background: url("./images/activity/additional_cop.png") center center no-repeat;
+  background-size: 329px 282px;
+  .layer-tips{
+    height: 148px;
+    .additional_content{
+      height: 90px;
+      margin-bottom: 20px;
+      .additional_cop_left{
+        color: #fff;
+        width: 95px;
+        margin-left: 25px;
+        float: left;
+        text-align: center;
+        .additional_title{
+          margin-top: 12px;
+          margin-bottom: 2px;
+          font-size: 12px;
+        }
+        .money-line{
+          font-size: 25px;
+          span{
+            font-size: 19px;
+          }
+        }
+        .additional_ad{
+          font-size: 9px;
+        }
+      }
+      .additional_cop_right{
+        text-align: left;
+        width:170px;
+        padding: 5px;
+        float: left;
+        .additional-title{
+          margin-top: 7px;
+          margin-bottom: 5px;
+          font-size: 10px;
+          color: #888888;
+        }
+        .additional_shop{
+          overflow: hidden;
+          white-space: nowrap;
+          color: #444;
+          font-size: 12px;
+          margin-bottom: 2px;
+        }
+        .additional_list{
+          font-size: 12px;
+          color: #888888;
+        }
+      }
+    }
+  }
+  .rob_my_tip{
+    font-family: "微软雅黑";
+    margin-bottom: 4px;
+    color: #a70403;
+    font-size: 12px;
+    span{
+      font-size: 16px;
+    }
+  }
+}
+.layer-noprize.additional_packet{
+  background: url("./images/activity/additional_packet.png") center center no-repeat;
+  background-size: 329px 282px;
+  .layer-tips{
+    height: 148px;
+    .additional_content{
+      height: 90px;
+      margin-bottom: 20px;
+      .additional_cop_left{
+        color: #fff;
+        width: 95px;
+        margin-left: 25px;
+        float: left;
+        text-align: center;
+        .additional_title{
+          margin-top: 12px;
+          margin-bottom: 2px;
+          font-size: 12px;
+        }
+        .money-icon{
+          font-size: 19px;
+        }
+        .money-line{
+          font-size: 25px;
+          span{
+            font-size: 19px;
+          }
+        }
+        .additional_ad{
+          font-size: 9px;
+        }
+      }
+      .additional_cop_right{
+        text-align: left;
+        width:170px;
+        padding: 5px;
+        float: left;
+        .additional-title{
+          margin-top: 7px;
+          margin-bottom: 5px;
+          font-size: 10px;
+          color: #888888;
+        }
+        .additional_shop{
+          overflow: hidden;
+          white-space: nowrap;
+          color: #444;
+          font-size: 12px;
+          margin-bottom: 2px;
+        }
+        .additional_list{
+          font-size: 12px;
+          color: #888888;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .rob_my_tip{
+    font-family: "微软雅黑";
+    margin-bottom: 4px;
+    color: #a70403;
+    font-size: 12px;
+    span{
+      font-size: 16px;
+    }
+  }
+}
+//additional_award end
+
+a{
+  text-decoration: none;
+}
