@@ -1,0 +1,13 @@
+{
+  "apps" : [{
+    "script"    : "start.js",
+    "name"      : "dlcms_uat",
+    "watch"     : false,
+    "instances": -1,
+    "exec_mode": "cluster",
+    "env": {
+      "NODE_ENV": "uat",
+      "DEBUG": "fa,fa:*"
+    }
+  }]
+}

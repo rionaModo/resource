@@ -1,0 +1,13 @@
+{
+  "apps" : [{
+    "script"    : "start.js",
+    "name"      : "dlcms_al_53",
+    "watch"     : false,
+    "instances": -1,
+    "exec_mode": "cluster",
+    "env": {
+      "NODE_ENV": "test_al_53",
+      "DEBUG": "fa,fa:*"
+    }
+  }]
+}

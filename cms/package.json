@@ -1,0 +1,30 @@
+{
+  "name": "dlcms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://182.92.230.201:8000/dl_dev/dlcms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "connect-redis": "^3.0.2",
+    "fa": "git+https://github.com/dodio/fa.git",
+    "serve-favicon": "^2.3.0",
+    "session-file-store": "^0.2.0",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "fis-optimizer-clean-css-2x": "^0.2.1",
+    "fis-optimizer-uglify-js": "^0.2.0",
+    "fis-parser-less": "^0.1.3",
+    "less": "^2.6.1",
+    "liveload": "^0.3.3"
+  }
+}

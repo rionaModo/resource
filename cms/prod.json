@@ -1,0 +1,13 @@
+{
+  "apps" : [{
+    "script"    : "start.js",
+    "name"      : "dlcms_prod",
+    "watch"     : false,
+    "instances": "max",
+    "exec_mode": "cluster",
+    "env": {
+      "NODE_ENV": "prod",
+      "DEBUG": "fa,fa:*"
+    }
+  }]
+}

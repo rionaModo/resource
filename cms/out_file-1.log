@@ -1,0 +1,4 @@
+本来的环境变量：
+NODE_CONFIG_DIR:undefined
+改写以后的环境变量：
+NODE_CONFIG_DIR:F:\work\dlcms\server/config

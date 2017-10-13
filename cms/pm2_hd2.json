@@ -1,0 +1,14 @@
+{
+  "apps" : [{
+    "script"    : "start.js",
+    "name"      : "dlcms_hd2",
+    "watch"     : false,
+    "instances": -1,
+    "error_file":"/data/dllogs/dlcms/error_file.log",
+    "out_file":"/data/dllogs/dlcms/out_file.log",
+    "exec_mode": "cluster",
+    "env": {
+      "NODE_ENV": "hd2_prod"
+    }
+  }]
+}
